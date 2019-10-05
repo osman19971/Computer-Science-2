@@ -1,0 +1,4 @@
+Exception in thread main java.lang.IllegalArgumentException Maximum Score is below or equal to 0. Please fill in maximum Score correctly
+	at GradeItem.init(GradeItem.java72)
+	at CalvinNguyen_02.processGradeItemData(CalvinNguyen_02.java196)
+	at CalvinNguyen_02.main(CalvinNguyen_02.java80)

@@ -1,0 +1,36 @@
+Running Test 1a:
+Student {student ID:900123456, firstName:Joe, lastName:Doe, emailAddress:joedoe@msudenver.edu}
+
+Running Test 1b:
+Student {Student ID:900123456, Grade Item ID:1, Course:23456, Item Type:HW, Date:20190112, Maximum Score:100, Actual Score:95}
+
+
+*********************************************************
+
+
+Running Test 2a:
+Student Object Data
+Student ID:900567423
+First Name:William
+last Name:Baker
+Email Address:Wbaker@msudenver.edu
+
+Running Test 2b:
+GradeItemData
+GradeItem ID: 1
+Student ID: 900567892
+Course: 09876
+ItemType: Test
+Date: 20190213
+Maximum Score: 100
+Actual Score: 85
+
+
+*********************************************************
+
+
+Running Test 3a:
+Student Objects are unequal: Student IDs are 900123456 and 900567423
+
+Running Test 3b:
+GradeItem Objects are unequal: Student IDs are 900123456 and 900567892

@@ -1,0 +1,4 @@
+Exception in thread "main" java.lang.IllegalArgumentException: hw is not a valid item type. Please enter a valid item type.
+	at GradeItem.<init>(GradeItem.java:80)
+	at CalvinNguyen_02.processGradeItemData(CalvinNguyen_02.java:196)
+	at CalvinNguyen_02.main(CalvinNguyen_02.java:80)

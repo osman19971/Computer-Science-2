@@ -1,0 +1,22 @@
+StudentID  FirstName  LastName  Email
+  Grade Items
+  GradeItemID  CourseID  Type  Date  Maximum Score   Actual Score    Grade (%)*
+===================================================================================
+  Total                           SumOfMaxScore   SumActualScore    Grade (%)
+
+900123451    Alyssa    Williams   AlyssaWilliams@msudenver.edu 
+   Grade Items
+   1	12346	HW      	20190112	100	95
+   2	12346	Class Work	20190112	100	81
+   3	12346	Test    	20190112	500	483
+======================================================================================
+	Total                                   700	659	94.1% 
+
+900123457    Chris    Stevens   ChrisStevens@msudenver.edu 
+   Grade Items
+   1	23456	HW      	20190113	100	85
+   2	23456	Class Work	20190112	100	12
+   3	23456	Quiz    	20190112	300	289
+   4	23456	Test    	20190112	800	461
+======================================================================================
+	Total                                  1300	847	65.2% 

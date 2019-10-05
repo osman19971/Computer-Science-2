@@ -1,0 +1,4 @@
+Exception in thread "main" java.lang.IllegalArgumentException: Actual Score is not between 0 and Maximum score. Please fill in Actual score correctly
+	at GradeItem.<init>(GradeItem.java:76)
+	at CalvinNguyen_02.processGradeItemData(CalvinNguyen_02.java:196)
+	at CalvinNguyen_02.main(CalvinNguyen_02.java:80)
