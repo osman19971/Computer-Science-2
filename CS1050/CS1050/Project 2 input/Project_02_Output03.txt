@@ -1,0 +1,4 @@
+Exception in thread "main" java.lang.IllegalArgumentException: This email address:joedoe#msudenver.edudoes not have a '@'
+	at Student.<init>(Student.java:52)
+	at CalvinNguyen_02.processStudentData(CalvinNguyen_02.java:165)
+	at CalvinNguyen_02.main(CalvinNguyen_02.java:76)
