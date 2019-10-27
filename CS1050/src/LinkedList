@@ -1,0 +1,192 @@
+import javax.xml.soap.Node;
+
+
+
+
+public abstract class LinkedList<T> implements MyCollectionInterfaceProject04<T> {
+	
+	private Node firstNode;
+	
+	private int numberOfEntries;
+	
+	LinkedList() {
+		initializeDataFields();
+		
+	}
+	
+	public boolean add(T newItem) {
+		boolean result = false;
+		
+		Node newNode = new Node(newItem);
+		
+		newNode.next = firstNode;
+		firstNode = newNode;
+		
+		if (firstNode.equals(newNode)) {
+			numberOfEntries ++;
+		}
+		return result;
+		
+	}
+	
+	public boolean add(T newItem, int givenPosition) {
+		boolean result = false;
+		
+		if((givenPosition >= 0) && (givenPosition <= numberOfEntries)) {
+			
+			Node newNode = newNode(newItem);
+			
+			if (givenPosition == 0) {
+				newNode.next = firstNode;
+				firstNode = newNode;
+				numberOfEntries ++;
+				add(newItem);
+				result = true;
+			}
+
+			else {
+				Node currentNode = firstNode;
+				
+				for (int i = 1;i < givenPosition; i++) {
+					currentNode = currentNode.next;
+				}
+				
+				newNode.next = currentNode.next;
+				currentNode.next = newNode;
+				numberOfEntries++;
+			}// end of if
+		}
+		else {
+				throw new IndexOutOfBoundsException("Wrong position given");
+			}
+			return result;
+			
+		
+		
+	}
+	
+	private Node newNode(T newItem) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean remove(T anEntry) {
+		boolean result = false;
+		
+		Node currentNode = find(anEntry);
+		Node previousNode = firstNode;
+		
+		while(previousNode != null && previousNode != currentNode.getNext()) {
+			if (previousNode == currentNode) {
+				remove();
+				numberOfEntries--;
+				result = false;
+			}
+			else if (previousNode.next == currentNode) {
+				previousNode = currentNode.getNext();
+				numberOfEntries--;
+				result = true;
+			}// end of else if
+		}
+	}
+	
+
+
+	public void clear() {
+		initializeDataFields();
+	}
+	
+	public int getCurrentSize() {
+		return numberOfEntries;
+	}
+	
+	
+	public boolean isEmpty() {
+		boolean result;
+		
+		if(numberOfEntries= 0) {
+			result = true;
+		}
+		else {
+			result = false;
+		}
+		return result;
+	}// end of empty
+	
+	public int getFrequencyOf(T anEntry) {
+		Node currentNode = new Node(anEntry);
+		int count = 0;
+		for(int i = 0; i<= numberOfEntries; i++) {
+			if(anEntry.equals(currentNode.getData())) {
+				count++;
+			}
+			currentNode = currentNode.getNext();
+			
+		}
+		return count;
+	}
+	
+	public boolean contains(T anEntry) {
+		
+		boolean found = false;
+		
+		Node currentNode = firstNode;
+		
+		while(!found && (currentNode != null)) {
+			if(anEntry.equals(currentNode.getData())) {
+				found = true;
+			}
+			else {
+				currentNode = currentNode.getNext();
+			}// end of if
+			
+						
+		}// end of while
+		return found;
+	}// end of contains
+	
+	public void toArray(T[] result) {
+		
+		Node currentNode = firstNode;
+		
+		for(int i = numberOfEntries; i > 0; i--) {
+			result[i - 1] = (T) currentNode.getData();
+			currentNode = currentNode.getNext();
+		}
+	}
+	
+	private void initializeDataFields() {
+		firstNode = null;
+		numberOfEntries = 0;
+	}
+	
+	public Node find(T anEntry) {
+		Node pn = firstNode;
+		
+		while (pn != null && !pn.data.equals(anEntry)){
+			pn = pn.next;
+		}
+		return pn;
+		
+	}
+	
+	public class Node <T>{
+		private T data;
+		private Node next;
+		
+		private Node (T anEntry) {
+			data = anEntry;
+			next = null;
+			
+		}
+		private T getData() {return data;}
+		private Node getNext() {return next;}
+		private void setData(T anEntry) {data = anEntry;}
+		private void setNext(Node next) {this.next = next;}
+		
+	}
+
+	
+
+	
+}
